@@ -166,15 +166,13 @@ if __name__ == '__main__':
     
     parser = argparse.ArgumentParser()
     parser.add_argument( '-f', default='self', help='To make it runnable in jupyter' )
-    # parser.add_argument('--predictions', type=str, default='predictions_frontal_train224.txt')
-    # parser.add_argument('--gts', type=str, default='gts_frontal_train224.txt')
     parser.add_argument( '--model_path', type=str, default='lateral_pretrained_224_a025y2/',
                          help='path for saving trained models')
     parser.add_argument('--crop_size', type=int, default=224,
                         help='size for randomly cropping images')
     parser.add_argument('--focal_alpha', type=float, default=0.25)
     parser.add_argument('--focal_gamma', type=float, default=2.0)
-    parser.add_argument('--image_dir', type=str, default='/home/ysk/dataset/dataset/NLMCXR_png_pairs' ,
+    parser.add_argument('--image_dir', type=str, default='/NLMCXR_png_pairs' ,
                         help='directory for resized training images')
    
     parser.add_argument('--num_classes', type=int, default=82, help="classes number" )
@@ -199,16 +197,12 @@ if __name__ == '__main__':
                          help='learning rate for the whole model' )
 
     
-    
-    # Training details            #lateral_pretianed_224/Resnet_lateral_224_transformed-29.pkl    #/media/mdisk/ysk/frontal_pretrained_224/Resnet_single_image-35.pkl
-    parser.add_argument( '--pretrained', type=str, default='/media/mdisk/ysk/lateral_pretianed_224/Resnet_lateral_224_transformed-29.pkl', help='start from checkpoint or scratch' )
+    # Training details           
+    parser.add_argument( '--pretrained', type=str, default='transformed-29.pkl', help='start from checkpoint or scratch' )
     parser.add_argument( '--num_epochs', type=int, default=250 )
     parser.add_argument( '--batch_size', type=int, default=32 ) # on cluster setup, 60 each x 4 for Huckle server
     
-    # For eval_size > 30, it will cause cuda OOM error on Huckleberry
-    parser.add_argument( '--eval_size', type=int, default=28 ) # on cluster setup, 30 each x 4
-    parser.add_argument( '--num_woeval_sizerkers', type=int, default=4 )
-    parser.add_argument( '--clip', type=float, default=0.1 )
+
     parser.add_argument( '--lr_decay', type=int, default=40, help='epoch at which to start lr decay' )
     parser.add_argument( '--learning_rate_decay_every', type=int, default=30,
                          help='decay learning rate at every this number')
