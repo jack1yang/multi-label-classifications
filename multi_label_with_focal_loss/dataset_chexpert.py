@@ -12,19 +12,13 @@ import pickle
 class ChestXrayDataSet(Dataset):
     def __init__(self,
                  image_dir,
-                 #caption_json, # image captions: img_name, its_captions
                  file_list, # classification labels format like: img_name, its_class
                  #vocabulary,
-                 #s_max=10,
-                 #n_max=50,
                  transforms=None):
         self.image_dir = image_dir
-        #self.caption = JsonReader(caption_json)
         self.file_names, self.labels = self.__load_label_list(file_list)
         #self.vocab = vocabulary
         self.transform = transforms
-        #self.s_max = s_max
-        #self.n_max = n_max
 
     def __load_label_list(self, file_list):
         """
@@ -138,7 +132,7 @@ if __name__ == '__main__':
     #vocab_path = '../data/vocab.pkl'
     image_dir = '/home/ysk/dataset/dataset/'
     #caption_json = '../data/example_captions.json'
-    file_list = '/home/ysk/dataset/dataset/CheXpert-v1.0-small/valid.csv'
+    file_list = '/CheXpert-v1.0-small/valid.csv'
     batch_size = 1
     resize = 600
     crop_size = 500
