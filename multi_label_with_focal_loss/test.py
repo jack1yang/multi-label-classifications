@@ -122,8 +122,8 @@ if __name__ == '__main__':
     
     
     # Training details
-    parser.add_argument( '--pretrained', type=str, default='/media/mdisk/ysk/code/medical_long_sentence/test_concepts/lateral_pretrained_224/Resnet_single_image-206.pkl', help='start from checkpoint or scratch' )
-    parser.add_argument( '--batch_size', type=int, default=1 ) # on cluster setup, 60 each x 4 for Huckle server
+    parser.add_argument( '--pretrained', type=str, default='', help='start from checkpoint or scratch' )
+    parser.add_argument( '--batch_size', type=int, default=1 ) # 
     
 
     
