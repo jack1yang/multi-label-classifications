@@ -4,4 +4,4 @@ MIL/  为多示例学习方式实现multi-label classification 主要参考https
 
 multi_label_with_focal_loss/  为基于sigmoid的多标签分类，并添加focal loss函数进行训练
 
-其中两个目录都包含的了mAP评测方法
+其中两个目录都包含的了mAP评测方法，实现了11-point interpolated average precision 和 更加准确的一种方法
