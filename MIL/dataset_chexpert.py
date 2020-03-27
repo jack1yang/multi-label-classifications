@@ -19,7 +19,6 @@ class ChestXrayDataSet(Dataset):
                  #n_max=50,
                  transforms=None):
         self.image_dir = image_dir
-        #self.caption = JsonReader(caption_json)
         self.file_names, self.labels = self.__load_label_list(file_list)
         #self.vocab = vocabulary
         self.transform = transforms
@@ -136,9 +135,9 @@ def get_loader(image_dir,
 
 if __name__ == '__main__':
     #vocab_path = '../data/vocab.pkl'
-    image_dir = '/home/ysk/dataset/dataset/'
+    image_dir = '/dataset/'
     #caption_json = '../data/example_captions.json'
-    file_list = '/home/ysk/dataset/dataset/CheXpert-v1.0-small/valid.csv'
+    file_list = '/valid.csv'
     batch_size = 1
     resize = 600
     crop_size = 500
