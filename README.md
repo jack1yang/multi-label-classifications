@@ -8,10 +8,11 @@
 框架：pytorch
 
 
-MIL/  为多示例学习方式实现multi-label classification 主要参考[https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Fang_From_Captions_to_2015_CVPR_paper.pdf]
+MIL/  为multiple instance learning参考[https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Fang_From_Captions_to_2015_CVPR_paper.pdf]
 
 
-multi_label_with_focal_loss/  为基于sigmoid的多标签分类，并添加focal loss函数进行训练
+multi_label_with_focal_loss/  
+为基于sigmoid的多标签分类，并添加focal loss函数进行训练
 
 
 
