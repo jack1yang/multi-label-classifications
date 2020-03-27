@@ -74,8 +74,8 @@ def voc_eval(cls, predictions, gts):
 
 
 if __name__=='__main__':
-    predictions = np.loadtxt('results/predictions_lateral_224avg7_epoch39.txt')
-    gts = np.loadtxt('results/gts_lateral_224avg7_epoch39.txt')
+    predictions = np.loadtxt('epoch39.txt')
+    gts = np.loadtxt('epoch39.txt')
     outs = []
     #print(np.sum(gts[:,-5]))
     for cls in range(14):
