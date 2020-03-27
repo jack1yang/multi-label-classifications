@@ -109,7 +109,7 @@ if __name__ == '__main__':
     parser.add_argument('--crop_size', type=int, default=224 ,
                         help='size for randomly cropping images')
     
-    parser.add_argument('--image_dir', type=str, default='/home/ysk/dataset/dataset/NLMCXR_png_pairs' ,
+    parser.add_argument('--image_dir', type=str, default='dataset/NLMCXR_png_pairs' ,
                         help='directory for resized training images')
    
     parser.add_argument('--num_classes', type=int, default=82, help="classes number" )
@@ -123,7 +123,6 @@ if __name__ == '__main__':
     
     # Training details
     parser.add_argument( '--pretrained', type=str, default='/media/mdisk/ysk/code/medical_long_sentence/test_concepts/lateral_pretrained_224/Resnet_single_image-206.pkl', help='start from checkpoint or scratch' )
-    parser.add_argument( '--num_epochs', type=int, default=100 )
     parser.add_argument( '--batch_size', type=int, default=1 ) # on cluster setup, 60 each x 4 for Huckle server
     
 
